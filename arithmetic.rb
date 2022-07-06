@@ -79,3 +79,19 @@ puts greeting[5]
 puts greeting.include? "fri"
 puts greeting.include? "com"
 puts greeting[5,8]
+
+#================User Inputs==================
+
+puts "Enter your name: "
+
+name = gets.chomp
+
+puts "Hello #{name}, how are you? "
+
+#===============Calculation from user inputs================
+puts "=======================Addition==========================\n\n\n"
+puts "Enter the first number: "
+num1 = gets.chomp
+puts "Enter the second number: "
+num2 = gets.chomp
+puts "Results: #{num1.to_f + num2.to_f}"
