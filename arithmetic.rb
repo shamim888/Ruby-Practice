@@ -180,4 +180,129 @@ end
 
 if "a" < "b"
     puts "This is the right order"
+
+else
+    puts "this is not the correct order"
 end
+
+#========================Switch Statements======================
+
+todays_temp = 22
+
+case todays_temp
+
+    when 15..24
+        puts "it's cold outside"
+
+    when 25..29
+        puts "perfect weather for picnic"
+
+    when 30..39
+        puts "it's kinda hot outside"
+
+    when 40..50
+        puts "wet-bulb temperature! stay safe"
+
+    else
+        puts "not sure. retry"
+end
+
+#==========Dictionaries/ kinda like JS objects!=======================
+
+test_materials = {
+
+    "swan" => "A+",
+    "ryan" => "worker",
+    :tim => "B-",
+    6 => 24.87
+}
+
+test_materials["swan"] = "C"
+puts test_materials["swan"]
+puts test_materials["ryan"]
+puts test_materials[:tim]
+puts test_materials[6]
+
+#========================while loop=======================
+
+index = 4
+
+while index <= 23
+
+    puts "#{index} hola miguel"
+
+    index += 1
+end
+
+#===========================for loop=======================
+
+for index in 0..9
+    puts index
+end
+
+for d in 8..12
+    puts d
+end
+
+for num in 12..20
+    puts num
+end
+
+7.times do |num|
+    puts num
+end
+
+random_nums = [3, 6, 23, -6, 45.3, 89]
+
+for random_nums in random_nums
+
+    puts random_nums
+end
+
+puts "\n\n"
+
+lucky_nums = [78, 32, 9.8, -45]
+
+lucky_nums.each do |newset|
+
+    puts newset
+end
+
+#===================Exception Catching====================
+
+begin
+    num = 40/0
+
+rescue
+    puts "Infinity is bad, dawg!"
+end
+
+begin
+    puts bad_variable
+    # num = 10/0
+
+rescue ZeroDivisionError
+    puts "Infinity, here we come!"
+
+rescue
+    puts "Motherload of errors"
+end
+
+raise "Made up exceptions"
+
+==========================OOP============================
+
+class Books
+    attr_accessor :title, :author
+
+    def readBook()
+        puts "Reading #{self.title} by #{self.author}"
+    end
+end
+
+book1 = Books.new()
+book1.title = "Sherlock Holmes"
+book1.author = "Arthur Conan Doyle"
+
+book1.readBook()
+puts book1.author
