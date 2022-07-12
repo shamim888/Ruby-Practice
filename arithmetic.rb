@@ -306,3 +306,25 @@ book1.author = "Arthur Conan Doyle"
 
 book1.readBook()
 puts book1.author
+
+#=========================Constructors==============================
+
+class Team
+    attr_accessor :name, :country
+    def initialize(name, country)
+        @name = name
+        @country = country
+    end
+
+    def info()
+        puts "#{self.name} is a player of #{self.country} team"
+    end
+end
+
+team1 = Team.new("Tamim", "Bangladesh")
+
+puts team1.name
+puts team1.country
+
+team1.info()
+
