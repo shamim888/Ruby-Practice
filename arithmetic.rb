@@ -328,3 +328,118 @@ puts team1.country
 
 team1.info()
 
+#=================Getters and Setters==============================
+
+class Books
+    attr_accessor :title, :author
+    def initialize(title, author)
+        self.title = title
+        @author = author
+    end
+
+    def title= (title)
+        puts "set"
+        @title = title
+    end
+
+    def title
+        puts "get"
+        return @title
+    end
+end
+
+book1 = Books.new("Harry Potter", "J K Rowling")
+
+puts book1.title
+
+#======================inheritance==========================
+
+class Chef
+
+    def make_chicken()
+        puts "The chef makes chicken"
+    end
+
+    def make_salad()
+        puts "The chef also makes yammy salad"
+    end
+
+    def make_special_dish()
+        puts "The chef makes special Kebab"
+    end
+end
+
+class TurkishChef < Chef
+
+    def make_doner()
+        puts "This talented chef makes Döner"
+    end
+
+    def make_special_dish()
+        puts "The chef makes Şiş Kebap"
+    end
+end
+
+my_chef = Chef.new()
+
+my_chef.make_salad
+my_chef.make_special_dish
+
+my_turkish_chef = TurkishChef.new()
+my_turkish_chef.make_salad
+my_turkish_chef.make_special_dish
+
+#==================Inheritance using constructor=======================
+
+class Chef
+
+    attr_accessor :name, :age
+
+    def initialize(name,age)
+        @name = name
+        @age = age
+    end
+
+    def make_curry()
+        puts "The chef makes delicious curry"
+    end
+
+    def make_salad()
+        puts "The chef makes nice salad"
+    end
+
+    def make_special_dish()
+        puts "The chef makes a special dish"
+    end
+end
+
+class BengoliChef < Chef
+
+    attr_accessor :country_of_origin
+
+    def initialize(name, age, country_of_origin)
+        @country_of_origin = country_of_origin
+        super(name, age)
+    end
+
+    def make_rice()
+        puts "The chef can cook basmati rice"
+    end
+
+    def make_special_dish()
+        puts "The chef can make chicken bhuna"
+    end
+end
+
+our_chef = Chef.new("Salt Bae", 45)
+
+puts our_chef.name
+our_chef.make_curry()
+our_chef.make_special_dish()
+puts "\n\n"
+
+my_bengoli_chef = BengoliChef.new("Tommy Mia", 55, "Bangladesh")
+my_bengoli_chef.make_salad()
+my_bengoli_chef.make_special_dish()
+puts my_bengoli_chef.name
+puts my_bengoli_chef.country_of_origin
