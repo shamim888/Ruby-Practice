@@ -22,3 +22,15 @@ puts '12A'.to_i(16);
 puts '11011'.to_i(2);
 
 puts '654321'.to_i(8);
+
+#===========================random=================
+
+puts "Cappy Bara".length
+
+puts "Masum Billah".index("i")
+
+puts "2" === 2 ? "right" : "wrong"
+
+puts 35.odd?
+
+puts karim.play("song")

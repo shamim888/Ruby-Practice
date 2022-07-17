@@ -443,3 +443,33 @@ my_bengoli_chef.make_salad()
 my_bengoli_chef.make_special_dish()
 puts my_bengoli_chef.name
 puts my_bengoli_chef.country_of_origin
+
+# ========================Objects Methods=============================
+
+class Student
+    attr_accessor :name, :major, :cgpa
+    
+    def initialize(name, major, cgpa)
+        @name = name
+        @major = major
+        @cgpa = cgpa
+    end
+
+    # def has_honor
+    #     if @cgpa >= 3.1
+    #         return true
+    #     end
+    #         return false
+    # end
+
+    def has_honor
+        @cgpa >= 3.1 ? true : false
+    end
+end
+
+student1 = Student.new("karim", "physics", 3.25)
+student2 = Student.new("Salim", "CSE", 3.31)
+student3 = Student.new("Bunty", "Arts", 2.92)
+
+puts student1.has_honor
+puts student3.has_honor
