@@ -510,3 +510,20 @@ def run_test(questions)
 end
 
 run_test(questions)
+
+# ================================Modules=============================
+
+module Greet
+    def hi(name)
+        puts "Hello, #{name}"
+    end
+
+    def bye(name)
+        puts "Thanks, #{name}. See you later"
+    end
+end
+
+include Greet
+
+Greet.hi("Shamim")
+Greet.bye("Rafiq")
