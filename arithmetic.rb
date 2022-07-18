@@ -473,3 +473,40 @@ student3 = Student.new("Bunty", "Arts", 2.92)
 
 puts student1.has_honor
 puts student3.has_honor
+
+# =====================Building a Quiz==========================
+
+class Question
+    attr_accessor :prompt, :answer
+    def initialize(prompt, answer)
+        @prompt = prompt
+        @answer = answer
+    end
+end
+
+q1 = "What is the color of the sky?\n(a)red\n(b)yellow\n(c)blue"
+q2 = "how many legs birds have?\n(a)four\n(b)two\n(c)three"
+q3 = "what is the color of snow?\n(a)white\n(b)red\n(c)blue"
+q4 = "How many ears you have?\n(a)one\n(b)two\n(c)three"
+
+questions = [
+    Question.new(q1, "c"),
+    Question.new(q2, "b"),
+    Question.new(q3, "a"),
+    Question.new(q4, "b")
+]
+
+def run_test(questions)
+    answer = ""
+    score = 0
+    for question in questions
+        puts question.prompt
+        answer = gets.chomp()
+        if answer == question.answer
+            score += 1
+        end
+    end
+    puts ("You got " + score.to_s + "/" + questions.length().to_s)
+end
+
+run_test(questions)
