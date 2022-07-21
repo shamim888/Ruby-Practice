@@ -34,3 +34,16 @@ puts "2" === 2 ? "right" : "wrong"
 puts 35.odd?
 
 puts karim.play("song")
+
+# =============================modules=======================
+
+module Tools
+
+    def day1(name)
+        puts "Today is very hot #{name} "
+    end
+
+    def day2(name)
+        puts "Yesterday was kinda cool #{name}"
+    end
+end

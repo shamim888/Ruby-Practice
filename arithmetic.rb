@@ -527,3 +527,12 @@ include Greet
 
 Greet.hi("Shamim")
 Greet.bye("Rafiq")
+
+# =======================================Access modules from another file===================
+
+require_relative "hello.rb"
+
+include Tools
+
+Tools.day1("Rancho")
+Tools.day2("Jim")
